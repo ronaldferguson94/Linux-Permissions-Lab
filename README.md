@@ -9,7 +9,7 @@ This lab demonstrates how to create users, groups, and directories in an AWS-hos
 
 ## **Environment**
 - Platform: AWS EC2 (Amazon Linux 2)
-- Privileges: Root user access (`sudo su`)
+- Privileges: Root user access (`sudo su`) ##### When you are signed into your EC2 instance as ec2-user, to get root access it is always " sudo -i ".  -Ron #####
 - Tools: Command-line interface (SSH terminal)
 
 
@@ -18,7 +18,7 @@ This lab demonstrates how to create users, groups, and directories in an AWS-hos
 ### **Step 1: Create Directories**
 As the root user, create the following directories:
 
-mkdir /Development /Operations /Analytics
+mkdir /Development /Operations /Analytics  ##### Here yes " mkdir " is how you create directories.  But keep in mind, how you created these directories they will be at the top of the file system because the directories have a / at the beginning of their names. -Ron #######
 
 
 #### Add Dummy Files to Each Directory
@@ -34,7 +34,7 @@ Create three groups to match your department structure:
 
 groupadd Developers
 groupadd Operations
-groupadd "Data Analysts"
+groupadd "Data Analysts"  ######## For this group name use a under score to repreent a space.  get rid of the "". -Ron ######
 
 
 Verify group creation:
